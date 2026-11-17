@@ -87,6 +87,26 @@ footer{flex-direction:column}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}
 }
 
+/* Garage concept studies: original inline artwork, no remote assets. */
+.garage-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.garage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}
+.garage-card{min-width:0;background:#121410;border:1px solid #5a5138}
+.garage-stage{position:relative;overflow:hidden;aspect-ratio:1.35;background:radial-gradient(ellipse at 50% 20%,#51432b 0%,#1a1c16 38%,#090b09 80%);perspective:900px}
+.garage-stage:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,#ffe5a50d 45%,transparent 65%);pointer-events:none}
+.garage-stage svg{width:100%;height:100%;transform-origin:50% 68%;animation:garage-orbit 12s ease-in-out infinite}
+.garage-card:nth-child(2) svg{animation-delay:-4s}
+.garage-card:nth-child(3) svg{animation-delay:-8s}
+.garage-caption{padding:22px}
+.garage-caption h3{margin:10px 0 12px}
+.garage-caption p{font-size:14px;color:var(--muted);margin-bottom:0}
+.garage-controls{display:flex;gap:10px;align-items:center;margin-top:25px;color:var(--muted);font-size:13px;cursor:pointer;width:fit-content}
+.garage-controls input{accent-color:var(--gold);width:18px;height:18px}
+.garage-controls input:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+#garage:has(#pause-garage:checked) .garage-stage svg{animation-play-state:paused}
+@keyframes garage-orbit{0%,100%{transform:rotateY(-14deg) rotateZ(-1deg)}50%{transform:rotateY(14deg) rotateZ(1deg)}}
+@media(max-width:800px){.garage-grid{grid-template-columns:1fr}.garage-stage{aspect-ratio:1.8}}
+@media(prefers-reduced-motion:reduce){.garage-stage svg{animation:none}}
+
 </style>
 </head>
 <body>
@@ -98,6 +118,7 @@ footer{flex-direction:column}
 <nav aria-label="Main navigation">
 <a href="#origin">Origin</a>
 <a href="#worlds">Worlds</a>
+<a href="#garage">The Garage</a>
 <a href="#characters">Characters</a>
 <a href="#nfts">NFT vision</a>
 </nav>
@@ -227,6 +248,62 @@ footer{flex-direction:column}
 </article>
 </div>
 <p class="notice">Original concept emblems illustrate the lore. These are not minted NFTs or final collection artwork.</p>
+</section>
+<section id="garage" class="section" aria-labelledby="garage-title">
+<div class="garage-heading"><span class="section-label">The debut / The Garage</span><span class="status">Coming soon · Concept preview</span></div>
+<h2 id="garage-title">Built in the shadows.<br>Defined by gold.</h2>
+<p class="section-intro">MEMOCEO’s first collection begins in The Garage: original, stylized vehicle collectibles in obsidian black and metallic gold. Cinematic lighting. Unmistakable presence. WE DON’T CHASE THE EMPIRE. WE BUILD IT.</p>
+<label class="garage-controls"><input type="checkbox" id="pause-garage">Pause vehicle animations</label>
+<div class="garage-grid"><article class="garage-card"><div class="garage-stage"><svg viewBox="0 0 390 270" role="img" aria-labelledby="garage-car-1">
+<title id="garage-car-1">Obsidian GT: original black-and-gold stylized vehicle concept</title>
+<defs><linearGradient id="garage-body-1" x1="0" y1="0" x2="0.2" y2="1"><stop stop-color="#606352"/><stop offset=".45" stop-color="#20271f"/><stop offset="1" stop-color="#080b08"/></linearGradient><linearGradient id="garage-glass-1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a2956c"/><stop offset=".4" stop-color="#272e29"/><stop offset="1" stop-color="#101410"/></linearGradient></defs>
+<ellipse cx="195" cy="213" rx="159" ry="23" fill="#080a08" stroke="#73603a" stroke-width=".8"/>
+<ellipse cx="194" cy="197" rx="137" ry="11" fill="#000" opacity=".7"/>
+<path d="M48 163 L70 133 L124 122 L166 87 Q179 77 206 81 L246 90 L280 125 L327 141 L345 165 L332 186 H51 Z" fill="url(#garage-body-1)" stroke="#d6b774" stroke-width="2" stroke-linejoin="round"/>
+<path d="M136 123 L173 91 L205 88 L237 97 L265 125 Z" fill="url(#garage-glass-1)" stroke="#9a8558" stroke-width="1.5"/>
+<path d="M65 151 Q191 141 323 158 M142 137 L148 175 M252 137 L258 174" fill="none" stroke="#d6b774" stroke-width="1"/>
+<path d="M54 163 L78 161 M314 161 L336 167" stroke="#f7e0a3" stroke-width="4"/>
+<path d="M160 143 H177 M264 146 H277" stroke="#d6b774" stroke-width="2"/>
+<g fill="#0b0d0a" stroke="#d6b774" stroke-width="2"><circle cx="102" cy="181" r="28"/><circle cx="288" cy="181" r="28"/></g>
+<g fill="#24281f" stroke="#ad9259" stroke-width="1.5"><circle cx="102" cy="181" r="18"/><circle cx="288" cy="181" r="18"/></g>
+<path d="M102 163 V199 M84 181 H120 M89 168 L115 194 M89 194 L115 168 M288 163 V199 M270 181 H306 M275 168 L301 194 M275 194 L301 168" stroke="#bca169" stroke-width="1.5"/>
+<path d="M137 186 H252" stroke="#d6b774" stroke-width="2"/>
+</svg></div>
+<div class="garage-caption"><span class="eyebrow">Grand touring · Concept study</span><h3>Obsidian GT</h3><p>A long silhouette. Quiet authority. An obsidian body traced in gold.</p></div></article>
+<article class="garage-card"><div class="garage-stage"><svg viewBox="0 0 390 270" role="img" aria-labelledby="garage-car-2">
+<title id="garage-car-2">Aurum R: original black-and-gold stylized vehicle concept</title>
+<defs><linearGradient id="garage-body-2" x1="0" y1="0" x2="0.2" y2="1"><stop stop-color="#606352"/><stop offset=".45" stop-color="#20271f"/><stop offset="1" stop-color="#080b08"/></linearGradient><linearGradient id="garage-glass-2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a2956c"/><stop offset=".4" stop-color="#272e29"/><stop offset="1" stop-color="#101410"/></linearGradient></defs>
+<ellipse cx="195" cy="213" rx="159" ry="23" fill="#080a08" stroke="#73603a" stroke-width=".8"/>
+<ellipse cx="194" cy="197" rx="137" ry="11" fill="#000" opacity=".7"/>
+<path d="M38 167 L65 139 L137 129 L175 103 L222 102 L259 128 L319 145 L346 164 L336 184 H43 Z" fill="url(#garage-body-2)" stroke="#d6b774" stroke-width="2" stroke-linejoin="round"/>
+<path d="M154 128 L181 110 L216 110 L245 130 Z" fill="url(#garage-glass-2)" stroke="#9a8558" stroke-width="1.5"/>
+<path d="M65 151 Q191 141 323 158 M142 137 L148 175 M252 137 L258 174" fill="none" stroke="#d6b774" stroke-width="1"/>
+<path d="M54 163 L78 161 M314 161 L336 167" stroke="#f7e0a3" stroke-width="4"/>
+<path d="M160 143 H177 M264 146 H277" stroke="#d6b774" stroke-width="2"/>
+<g fill="#0b0d0a" stroke="#d6b774" stroke-width="2"><circle cx="102" cy="181" r="28"/><circle cx="288" cy="181" r="28"/></g>
+<g fill="#24281f" stroke="#ad9259" stroke-width="1.5"><circle cx="102" cy="181" r="18"/><circle cx="288" cy="181" r="18"/></g>
+<path d="M102 163 V199 M84 181 H120 M89 168 L115 194 M89 194 L115 168 M288 163 V199 M270 181 H306 M275 168 L301 194 M275 194 L301 168" stroke="#bca169" stroke-width="1.5"/>
+<path d="M137 186 H252" stroke="#d6b774" stroke-width="2"/>
+</svg></div>
+<div class="garage-caption"><span class="eyebrow">Track silhouette · Concept study</span><h3>Aurum R</h3><p>Low, sculpted, unapologetic. A gold-edged vision built for the spotlight.</p></div></article>
+<article class="garage-card"><div class="garage-stage"><svg viewBox="0 0 390 270" role="img" aria-labelledby="garage-car-3">
+<title id="garage-car-3">Midnight Sovereign: original black-and-gold stylized vehicle concept</title>
+<defs><linearGradient id="garage-body-3" x1="0" y1="0" x2="0.2" y2="1"><stop stop-color="#606352"/><stop offset=".45" stop-color="#20271f"/><stop offset="1" stop-color="#080b08"/></linearGradient><linearGradient id="garage-glass-3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a2956c"/><stop offset=".4" stop-color="#272e29"/><stop offset="1" stop-color="#101410"/></linearGradient></defs>
+<ellipse cx="195" cy="213" rx="159" ry="23" fill="#080a08" stroke="#73603a" stroke-width=".8"/>
+<ellipse cx="194" cy="197" rx="137" ry="11" fill="#000" opacity=".7"/>
+<path d="M45 168 L62 127 L114 120 L142 77 L243 77 L274 120 L322 133 L342 164 L334 189 H47 Z" fill="url(#garage-body-3)" stroke="#d6b774" stroke-width="2" stroke-linejoin="round"/>
+<path d="M128 120 L150 88 H231 L254 122 Z" fill="url(#garage-glass-3)" stroke="#9a8558" stroke-width="1.5"/>
+<path d="M65 151 Q191 141 323 158 M142 137 L148 175 M252 137 L258 174" fill="none" stroke="#d6b774" stroke-width="1"/>
+<path d="M54 163 L78 161 M314 161 L336 167" stroke="#f7e0a3" stroke-width="4"/>
+<path d="M160 143 H177 M264 146 H277" stroke="#d6b774" stroke-width="2"/>
+<g fill="#0b0d0a" stroke="#d6b774" stroke-width="2"><circle cx="102" cy="181" r="28"/><circle cx="288" cy="181" r="28"/></g>
+<g fill="#24281f" stroke="#ad9259" stroke-width="1.5"><circle cx="102" cy="181" r="18"/><circle cx="288" cy="181" r="18"/></g>
+<path d="M102 163 V199 M84 181 H120 M89 168 L115 194 M89 194 L115 168 M288 163 V199 M270 181 H306 M275 168 L301 194 M275 194 L301 168" stroke="#bca169" stroke-width="1.5"/>
+<path d="M137 186 H252" stroke="#d6b774" stroke-width="2"/>
+</svg></div>
+<div class="garage-caption"><span class="eyebrow">Elevated presence · Concept study</span><h3>Midnight Sovereign</h3><p>Commanding proportions. Midnight panels. A signature of restrained power.</p></div></article></div>
+<p class="notice">Original 2D concept illustrations with a slow perspective motion study — not final NFT artwork or full 3D turntables. Names and designs are creative proposals. Final artwork, animation, supply, network, pricing, and launch date are not set.</p>
+<p class="notice">Coming soon. Minting and payments are disabled; no wallet connection or signature is requested. These concepts do not represent ownership of a physical vehicle or guaranteed benefits.</p>
 </section>
 <section id="characters" class="section">
 <div class="split">
