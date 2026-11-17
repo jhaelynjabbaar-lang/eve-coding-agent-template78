@@ -94,3 +94,18 @@ Deploy with `eve deploy`, then install the GitHub App on your repositories from 
 - [Code extension](https://eve.dev/docs/code-extension)
 - [Slack channel](https://eve.dev/docs/channels/slack), [Slack code channels](https://eve.dev/docs/channels/slack/reference#serve-slack-code-channels), and [GitHub channel](https://eve.dev/docs/channels/github)
 - [Vercel Sandbox](https://eve.dev/docs/sandbox/vercel)
+
+## MEMOCEO
+
+The public `/memoceo` route presents the MEMOCEO origin, pillars, five worlds,
+characters, and NFT vision without changing agent authentication. Character
+profiles expand with native HTML disclosure controls. The page is self-contained
+and makes no external asset, wallet, or payment requests.
+
+This is a lore and collection-concept page, not an NFT integration: no contract,
+wallet connection, minting, ownership verification, or token-gated access exists.
+Before enabling those features, choose a network, finalize artwork and metadata,
+set supply and mint terms, and implement and test the contract and wallet flows.
+
+Edit `agent/lib/memoceo-page.ts` for page content. Keep the corresponding page in
+the other MEMOCEO app aligned when making changes.
