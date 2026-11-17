@@ -92,6 +92,8 @@ footer{flex-direction:column}
 .garage-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}
 .garage-card{min-width:0;background:#121410;border:1px solid #5a5138}
 .garage-stage{position:relative;overflow:hidden;aspect-ratio:1.35;background:radial-gradient(ellipse at 50% 20%,#51432b 0%,#1a1c16 38%,#090b09 80%);perspective:900px}
+.garage-stage.garage-approved{aspect-ratio:2/3}
+.garage-approved img{display:block;width:100%;height:100%;object-fit:contain}
 .garage-stage:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,#ffe5a50d 45%,transparent 65%);pointer-events:none}
 .garage-stage svg{width:100%;height:100%;transform-origin:50% 68%;animation:garage-orbit 12s ease-in-out infinite}
 .garage-card:nth-child(2) svg{animation-delay:-4s}
@@ -302,7 +304,7 @@ footer{flex-direction:column}
 <path d="M137 186 H252" stroke="#d6b774" stroke-width="2"/>
 </svg></div>
 <div class="garage-caption"><span class="eyebrow">Elevated presence · Concept study</span><h3>Midnight Sovereign</h3><p>Commanding proportions. Midnight panels. A signature of restrained power.</p></div></article></div>
-<p class="notice">Original 2D concept illustrations with a slow perspective motion study — not final NFT artwork or full 3D turntables. Names and designs are creative proposals. Final artwork, animation, supply, network, pricing, and launch date are not set.</p>
+<p class="notice">Unapproved slots show 2D concept studies with subtle motion. Approved driver-and-car illustrations replace them after owner review; these are not minted NFTs or full 3D turntables. Names and designs are creative proposals. Supply, network, pricing, and launch date are not set.</p>
 <p class="notice">Coming soon. Minting and payments are disabled; no wallet connection or signature is requested. These concepts do not represent ownership of a physical vehicle or guaranteed benefits.</p>
 </section>
 <section id="characters" class="section">

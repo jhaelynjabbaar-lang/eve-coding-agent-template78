@@ -109,3 +109,17 @@ set supply and mint terms, and implement and test the contract and wallet flows.
 
 Edit `agent/lib/memoceo-page.ts` for page content. Keep the corresponding page in
 the other MEMOCEO app aligned when making changes.
+
+### Approved artwork
+
+Both apps use the same private Blob store with managed OIDC (`BLOB_STORE_ID`).
+`/memoceo` renders only owner-approved artwork. `/memoceo/art/{architect|executor|outsider}`
+serves only the current approved slot, never a client-provided blob URL or draft ID.
+Public images are cached for up to 60 seconds; HTML and approval reads are uncached.
+If no approval exists or storage is unavailable, the original concept cards remain.
+
+Storage namespaces are `memoceo/preview` and `memoceo/production`, selected only by
+`VERCEL_ENV`. **All preview branches share preview drafts and approvals.** Production
+uses a separate set and must be approved from the production studio after release.
+A preview deployment does not publish to production. Approval replaces the current
+pairing's art on both apps in the same environment. Publication does not mint an NFT.
